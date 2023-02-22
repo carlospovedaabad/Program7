@@ -10,5 +10,5 @@ package elementos;
  */
 
 public interface Pintable  {
-    public void pintar(int id, String nombre, float x, float y);
+    public void pintar();
 }

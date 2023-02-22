@@ -9,11 +9,11 @@ package elementos;
  * @author Car
  */
 public class Heroe extends ElementoMovil implements Pintable {
+
     private int fuerza;
-   
-    
+
     public Heroe(int id, float posicionX, float posicionY, String nombre, int fuerza) {
-        super(id, posicionX,posicionY,nombre);
+        super(id, posicionX, posicionY, nombre);
         this.fuerza = fuerza;
     }
 
@@ -27,18 +27,18 @@ public class Heroe extends ElementoMovil implements Pintable {
         } else {
             throw new IllegalArgumentException("La fuerza debe ser un numero entero entre 0 y 9");
         }
-        
+
     }
-    
-    public boolean colisiona(Elemento p){
-        
+
+    public boolean colisiona(Elemento p) {
+
         return false;
-        
+
     }
 
     @Override
     public boolean mover(float incrementoX, float incriementoY) {
-       return true;
+        return true;
     }
 
     @Override
@@ -47,7 +47,9 @@ public class Heroe extends ElementoMovil implements Pintable {
     }
 
     @Override
-    public void pintar(int id, String nombre, float x, float y) {
-       
+    public void pintar() {
+        if (this.esPintable() == true) {
+            System.out.println("PINTANDO ");
+        }
     }
 }

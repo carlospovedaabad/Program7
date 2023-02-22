@@ -16,7 +16,6 @@ public class Fantasma extends ElementoMovil implements Pintable {
         super(id, posicionX, posicionY, nombre);
         this.vivo = true;
     }
-    
 
     @Override
     public boolean mover(float incrementoX, float incriementoY) {
@@ -25,27 +24,26 @@ public class Fantasma extends ElementoMovil implements Pintable {
 
     @Override
     public boolean esPintable() {
-        if(this.vivo == true){
+        if (this.vivo == true) {
             float x = this.getPosicionX();
             float y = this.getPosicionY();
             boolean dentroX = x <= LIMITE_SUPERIOR && x >= LIMITE_INFERIOR;
             boolean dentroY = y <= LIMITE_SUPERIOR && y >= LIMITE_INFERIOR;
-            if(dentroX && dentroY){
+            if (dentroX && dentroY) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        }else{
+        } else {
             return false;
         }
-        
-        
+
     }
 
     @Override
-    public void pintar(int id, String nombre, float x, float y) {
-        if(this.esPintable()== true){
-        System.out.println("PINTANDO "+id+nombre+x+y+this.getClass());
+    public void pintar() {
+        if (this.esPintable() == true) {
+            System.out.println("PINTANDO ");
         }
     }
 

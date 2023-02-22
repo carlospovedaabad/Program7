@@ -20,7 +20,7 @@ public class ElementoFijo extends Elemento implements Pintable {
     }
 
     @Override
-    public void pintar(int id, String nombre, float x, float y) {
+    public void pintar() {
 
     }
 }
