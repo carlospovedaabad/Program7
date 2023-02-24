@@ -8,14 +8,14 @@ package elementos;
  *
  * @author Car
  */
-public abstract class Elemento {
+public abstract class Elemento implements Pintable{
 
     private int id;
     private float posicionX;
     private float posicionY;
     private String nombre;
 
-    protected static final float TAMANO_PANTALLA = 20f;
+    protected static final float TAMANO_PANTALLA = 1000f;
     protected static final float LIMITE_INFERIOR = 0.5f*TAMANO_PANTALLA;
     protected static final float LIMITE_SUPERIOR = -0.5f*TAMANO_PANTALLA;
 
